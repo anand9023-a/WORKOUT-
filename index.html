@@ -3,7 +3,7 @@
 <head>  
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>6-Day Home Workout Plan</title>  
+    <title>Aesthetic Mass Transformation Plan</title>  
     <script src="https://cdn.tailwindcss.com"></script>  
     <link rel="preconnect" href="https://fonts.googleapis.com">  
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
@@ -22,6 +22,10 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
             overflow: hidden;  
         }  
+        .day-header-gold {  
+            background-color: #fef3c7;  
+            color: #92400e;  
+        }  
         .day-header-red {  
             background-color: #fecaca;  
             color: #b91c1c;  
@@ -29,6 +33,10 @@
         .day-header-blue {  
             background-color: #bfdbfe;  
             color: #1e40af;  
+        }  
+        .day-header-green {  
+            background-color: #d1fae5;  
+            color: #065f46;  
         }  
         .exercise-table {  
             width: 100%;  
@@ -46,9 +54,6 @@
         .exercise-table tr:last-child td {  
             border-bottom: none;  
         }  
-        .workout-notes li {  
-            margin-bottom: 8px;  
-        }  
         @media print {  
             .no-print {  
                 display: none;  
@@ -65,22 +70,26 @@
   
     <div class="container mx-auto">  
         <div class="flex flex-col sm:flex-row justify-between items-center mb-6">  
-            <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 text-center sm:text-left mb-2 sm:mb-0">6-Day Workout Plan</h1>  
-            <button onclick="window.print()" class="no-print bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">  
-                Print as PDF  
+            <div class="text-center sm:text-left">
+                <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-1">Aesthetic Mass Plan</h1>  
+                <p class="text-gray-600 font-semibold text-sm">Target: 53kg to 65kg+ (Greek God Physique)</p>
+            </div>
+            <button onclick="window.print()" class="no-print mt-4 sm:mt-0 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-lg transition-colors shadow-lg">  
+                Download PDF  
             </button>  
         </div>  
   
-        <div class="mb-6 card">  
-            <div class="bg-gray-200 p-4 flex justify-between items-center text-sm font-semibold">  
-                Workout Notes  
+        <!-- Workout Notes -->
+        <div class="mb-6 card border-l-4 border-indigo-500">  
+            <div class="bg-indigo-50 p-3 flex justify-between items-center text-indigo-800 text-sm font-bold uppercase tracking-wider">  
+                Rules for Success (Must Follow)
             </div>  
-            <div class="p-4 text-gray-700">  
-                <ul class="list-disc list-inside workout-notes">  
-                    <li>Sets/Reps: 4 sets, 12–20 reps (agar easy lage to slow tempo + pause).</li>  
-                    <li>Rest: 45–60 sec.</li>  
-                    <li>Total Time: ~1 hour.</li>  
-                    <li>Duration: 6 din har week repeat karne layak, 100% effective.</li>  
+            <div class="p-4 text-gray-700 text-sm leading-relaxed">  
+                <ul class="list-disc list-inside space-y-2">  
+                    <li><span class="font-bold">The 4-Second Tempo:</span> Niche jaate waqt 4 second ginein. Slow movements se muscle fibre break hote hain.</li>  
+                    <li><span class="font-bold">Progressive Overload:</span> Jab 12 reps aaram se hone lagen, toh bag (backpack) mein eenth (bricks) bhar kar pehniye.</li>  
+                    <li><span class="font-bold">Rest Days:</span> Wed, Sat, aur Sun ko bilkul workout nahi karna. Body growth rest mein hoti hai.</li>  
+                    <li><span class="font-bold">Failure:</span> Har set mein tab tak rep karein jab tak sharir doosra rep na kar paaye.</li>  
                 </ul>  
             </div>  
         </div>  
@@ -88,7 +97,7 @@
         <!-- Day 1 -->  
         <div class="mb-6 card">  
             <div class="day-header-red p-4 flex justify-between items-center font-bold">  
-                Day 1 – Chest + Triceps + Forearms  
+                Monday: PUSH (Chest + Shoulders + Triceps)  
             </div>  
             <div class="p-4">  
                 <table class="exercise-table">  
@@ -100,18 +109,124 @@
                         </tr>  
                     </thead>  
                     <tbody>  
-                        <tr><td>1</td><td>Push-ups</td><td>4x20</td></tr>  
-                        <tr><td>2</td><td>Incline Push-ups</td><td>4x15</td></tr>  
-                        <tr><td>3</td><td>Diamond Push-ups</td><td>4x12</td></tr>  
-                        <tr><td>4</td><td>Tricep Dips (chair)</td><td>4x15</td></tr>  
-                        <tr><td>5</td><td>Plank to Push-up</td><td>3x12</td></tr>  
-                        <tr><td>6</td><td>Wrist Curl (bottle/dumbbell)</td><td>4x20</td></tr>  
-                        <tr><td>7</td><td>Reverse Wrist Curl</td><td>4x20</td></tr>  
-                        <tr><td>8</td><td>Finger-tip Push-ups</td><td>3x10</td></tr>  
+                        <tr><td>1</td><td>Decline Push-ups (Feet on bed)</td><td>3x Max</td></tr>  
+                        <tr><td>2</td><td>Pike Push-ups (Shoulder Focus)</td><td>3x 8-12</td></tr>  
+                        <tr><td>3</td><td>DB Lateral Raises (3kg - Slow)</td><td>4x 15</td></tr>  
+                        <tr><td>4</td><td>Diamond Push-ups</td><td>3x 12</td></tr>  
+                        <tr><td>5</td><td>Chair Dips (Triceps)</td><td>3x 15</td></tr>  
                     </tbody>  
                 </table>  
             </div>  
         </div>  
+  
+        <!-- Day 2 -->  
+        <div class="mb-6 card">  
+            <div class="day-header-blue p-4 flex justify-between items-center font-bold">  
+                Tuesday: PULL (Back + Biceps + Forearms)  
+            </div>  
+            <div class="p-4">  
+                <table class="exercise-table">  
+                    <thead>  
+                        <tr>  
+                            <th class="w-1/12">#</th>  
+                            <th class="w-7/12">Exercise</th>  
+                            <th class="w-4/12">Sets x Reps</th>  
+                        </tr>  
+                    </thead>  
+                    <tbody>  
+                        <tr><td>1</td><td>Wide Grip Pull-ups</td><td>3x Max</td></tr>  
+                        <tr><td>2</td><td>Chin-ups (Bicep focus)</td><td>3x Max</td></tr>  
+                        <tr><td>3</td><td>Inverted Rows (Under table/bar)</td><td>3x 12</td></tr>  
+                        <tr><td>4</td><td>Dumbbell Curls (3kg - Slow)</td><td>4x 12</td></tr>  
+                        <tr><td>5</td><td>Dead Hangs (Bar par latakna)</td><td>3 Rounds</td></tr>  
+                    </tbody>  
+                </table>  
+            </div>  
+        </div>  
+          
+        <!-- Day 3 -->  
+        <div class="mb-6 card">  
+            <div class="day-header-green p-4 flex justify-between items-center font-bold">  
+                Thursday: LEGS + ABS (Definition)  
+            </div>  
+            <div class="p-4">  
+                <table class="exercise-table">  
+                    <thead>  
+                        <tr>  
+                            <th class="w-1/12">#</th>  
+                            <th class="w-7/12">Exercise</th>  
+                            <th class="w-4/12">Sets x Reps</th>  
+                        </tr>  
+                    </thead>  
+                    <tbody>  
+                        <tr><td>1</td><td>Bulgarian Split Squats (1 foot on chair)</td><td>3x 12 each</td></tr>  
+                        <tr><td>2</td><td>Glute Bridges (Zameen par)</td><td>3x 20</td></tr>  
+                        <tr><td>3</td><td>Hanging Leg Raises (On Bar)</td><td>3x 12</td></tr>  
+                        <tr><td>4</td><td>Bicycle Crunches (Side Abs)</td><td>3x 30</td></tr>  
+                        <tr><td>5</td><td>Plank (Deep Core)</td><td>3x 1 min</td></tr>  
+                    </tbody>  
+                </table>  
+            </div>  
+        </div>  
+  
+        <!-- Day 4 -->  
+        <div class="mb-6 card">  
+            <div class="day-header-gold p-4 flex justify-between items-center font-bold">  
+                Friday: POWER MIX (Mass Builder)  
+            </div>  
+            <div class="p-4">  
+                <table class="exercise-table">  
+                    <thead>  
+                        <tr>  
+                            <th class="w-1/12">#</th>  
+                            <th class="w-7/12">Exercise</th>  
+                            <th class="w-4/12">Sets x Reps</th>  
+                        </tr>  
+                    </thead>  
+                    <tbody>  
+                        <tr><td>1</td><td>Weighted Push-ups (Use Backpack)</td><td>3x 8-10</td></tr>  
+                        <tr><td>2</td><td>DB Overhead Press (3kg)</td><td>3x 15</td></tr>  
+                        <tr><td>3</td><td>Close-grip Push-ups</td><td>3x 12</td></tr>  
+                        <tr><td>4</td><td>Farmer Walk (Grip Strength)</td><td>3x 45 sec</td></tr>  
+                    </tbody>  
+                </table>  
+            </div>  
+        </div>  
+
+        <!-- Nutrition Card -->
+        <div class="mb-6 card border-l-4 border-green-500">  
+            <div class="bg-green-50 p-3 flex justify-between items-center text-green-800 text-sm font-bold uppercase tracking-wider">  
+                Village Diet (For Mass Gain)
+            </div>  
+            <div class="p-4 text-gray-700 text-sm grid grid-cols-1 sm:grid-cols-2 gap-4">  
+                <div>
+                    <p class="font-bold text-green-700 mb-1">Morning:</p>
+                    <p>Bhiga Kala Chana (1 Katori) + Gud + 2 Kela.</p>
+                </div>
+                <div>
+                    <p class="font-bold text-green-700 mb-1">After Workout:</p>
+                    <p>500ml Doodh + 1 Katori Sattu ya Dalia.</p>
+                </div>
+                <div>
+                    <p class="font-bold text-green-700 mb-1">Daily Target:</p>
+                    <p>2 Litre Doodh + 5-6 Roti Ghee ke saath + Dahi.</p>
+                </div>
+                <div>
+                    <p class="font-bold text-green-700 mb-1">Village Secret:</p>
+                    <p>Doodh mein Ashwagandha ya Safed Musli (optional).</p>
+                </div>
+            </div>  
+        </div>  
+  
+        <div class="text-center text-sm text-gray-500 mt-8 mb-4 no-print">  
+            <p>⚡ Quality is everything. Don't rush the reps.</p>  
+            <p>⚡ Plan download karke Google Drive mein save karein.</p>  
+        </div>  
+          
+    </div>  
+  
+</body>  
+                </html>        </div>  
   
         <!-- Day 2 -->  
         <div class="mb-6 card">  
