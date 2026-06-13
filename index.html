@@ -1,229 +1,329 @@
-<!DOCTYPE html>  
-<html lang="en">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Aesthetic Mass Transformation Plan</title>  
-    <script src="https://cdn.tailwindcss.com"></script>  
-    <link rel="preconnect" href="https://fonts.googleapis.com">  
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">  
-    <style>  
-        body {  
-            font-family: 'Inter', sans-serif;  
-            background-color: #f3f4f6;  
-        }  
-        .container {  
-            max-width: 768px;  
-        }  
-        .card {  
-            background-color: white;  
-            border-radius: 12px;  
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
-            overflow: hidden;  
-        }  
-        .day-header-gold {  
-            background-color: #fef3c7;  
-            color: #92400e;  
-        }  
-        .day-header-red {  
-            background-color: #fecaca;  
-            color: #b91c1c;  
-        }  
-        .day-header-blue {  
-            background-color: #bfdbfe;  
-            color: #1e40af;  
-        }  
-        .day-header-green {  
-            background-color: #d1fae5;  
-            color: #065f46;  
-        }  
-        .exercise-table {  
-            width: 100%;  
-            border-collapse: collapse;  
-            font-size: 0.9rem;  
-        }  
-        .exercise-table th, .exercise-table td {  
-            padding: 12px;  
-            border-bottom: 1px solid #e5e7eb;  
-            text-align: left;  
-        }  
-        .exercise-table th {  
-            font-weight: 600;  
-        }  
-        .exercise-table tr:last-child td {  
-            border-bottom: none;  
-        }  
-        @media print {  
-            .no-print {  
-                display: none;  
-            }  
-            body {  
-                background-color: #ffffff;  
-                -webkit-print-color-adjust: exact;  
-                print-color-adjust: exact;  
-            }  
-        }  
-    </style>  
-</head>  
-<body class="bg-gray-100 p-4 sm:p-8">  
-  
-    <div class="container mx-auto">  
-        <div class="flex flex-col sm:flex-row justify-between items-center mb-6">  
-            <div class="text-center sm:text-left">
-                <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-1">Aesthetic Mass Plan</h1>  
-                <p class="text-gray-600 font-semibold text-sm">Target: 53kg to 65kg+ (Greek God Physique)</p>
-            </div>
-            <button onclick="window.print()" class="no-print mt-4 sm:mt-0 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-lg transition-colors shadow-lg">  
-                Download PDF  
-            </button>  
-        </div>  
-  
-        <!-- Workout Notes -->
-        <div class="mb-6 card border-l-4 border-indigo-500">  
-            <div class="bg-indigo-50 p-3 flex justify-between items-center text-indigo-800 text-sm font-bold uppercase tracking-wider">  
-                Rules for Success (Must Follow)
-            </div>  
-            <div class="p-4 text-gray-700 text-sm leading-relaxed">  
-                <ul class="list-disc list-inside space-y-2">  
-                    <li><span class="font-bold">The 4-Second Tempo:</span> Niche jaate waqt 4 second ginein. Slow movements se muscle fibre break hote hain.</li>  
-                    <li><span class="font-bold">Progressive Overload:</span> Jab 12 reps aaram se hone lagen, toh bag (backpack) mein eenth (bricks) bhar kar pehniye.</li>  
-                    <li><span class="font-bold">Rest Days:</span> Wed, Sat, aur Sun ko bilkul workout nahi karna. Body growth rest mein hoti hai.</li>  
-                    <li><span class="font-bold">Failure:</span> Har set mein tab tak rep karein jab tak sharir doosra rep na kar paaye.</li>  
-                </ul>  
-            </div>  
-        </div>  
-  
-        <!-- Day 1 -->  
-        <div class="mb-6 card">  
-            <div class="day-header-red p-4 flex justify-between items-center font-bold">  
-                Monday: PUSH (Chest + Shoulders + Triceps)  
-            </div>  
-            <div class="p-4">  
-                <table class="exercise-table">  
-                    <thead>  
-                        <tr>  
-                            <th class="w-1/12">#</th>  
-                            <th class="w-7/12">Exercise</th>  
-                            <th class="w-4/12">Sets x Reps</th>  
-                        </tr>  
-                    </thead>  
-                    <tbody>  
-                        <tr><td>1</td><td>Decline Push-ups (Feet on bed)</td><td>3x Max</td></tr>  
-                        <tr><td>2</td><td>Pike Push-ups (Shoulder Focus)</td><td>3x 8-12</td></tr>  
-                        <tr><td>3</td><td>DB Lateral Raises (3kg - Slow)</td><td>4x 15</td></tr>  
-                        <tr><td>4</td><td>Diamond Push-ups</td><td>3x 12</td></tr>  
-                        <tr><td>5</td><td>Chair Dips (Triceps)</td><td>3x 15</td></tr>  
-                    </tbody>  
-                </table>  
-            </div>  
-        </div>  
-  
-        <!-- Day 2 -->  
-        <div class="mb-6 card">  
-            <div class="day-header-blue p-4 flex justify-between items-center font-bold">  
-                Tuesday: PULL (Back + Biceps + Forearms)  
-            </div>  
-            <div class="p-4">  
-                <table class="exercise-table">  
-                    <thead>  
-                        <tr>  
-                            <th class="w-1/12">#</th>  
-                            <th class="w-7/12">Exercise</th>  
-                            <th class="w-4/12">Sets x Reps</th>  
-                        </tr>  
-                    </thead>  
-                    <tbody>  
-                        <tr><td>1</td><td>Wide Grip Pull-ups</td><td>3x Max</td></tr>  
-                        <tr><td>2</td><td>Chin-ups (Bicep focus)</td><td>3x Max</td></tr>  
-                        <tr><td>3</td><td>Inverted Rows (Under table/bar)</td><td>3x 12</td></tr>  
-                        <tr><td>4</td><td>Dumbbell Curls (3kg - Slow)</td><td>4x 12</td></tr>  
-                        <tr><td>5</td><td>Dead Hangs (Bar par latakna)</td><td>3 Rounds</td></tr>  
-                    </tbody>  
-                </table>  
-            </div>  
-        </div>  
-          
-        <!-- Day 3 -->  
-        <div class="mb-6 card">  
-            <div class="day-header-green p-4 flex justify-between items-center font-bold">  
-                Thursday: LEGS + ABS (Definition)  
-            </div>  
-            <div class="p-4">  
-                <table class="exercise-table">  
-                    <thead>  
-                        <tr>  
-                            <th class="w-1/12">#</th>  
-                            <th class="w-7/12">Exercise</th>  
-                            <th class="w-4/12">Sets x Reps</th>  
-                        </tr>  
-                    </thead>  
-                    <tbody>  
-                        <tr><td>1</td><td>Bulgarian Split Squats (1 foot on chair)</td><td>3x 12 each</td></tr>  
-                        <tr><td>2</td><td>Glute Bridges (Zameen par)</td><td>3x 20</td></tr>  
-                        <tr><td>3</td><td>Hanging Leg Raises (On Bar)</td><td>3x 12</td></tr>  
-                        <tr><td>4</td><td>Bicycle Crunches (Side Abs)</td><td>3x 30</td></tr>  
-                        <tr><td>5</td><td>Plank (Deep Core)</td><td>3x 1 min</td></tr>  
-                    </tbody>  
-                </table>  
-            </div>  
-        </div>  
-  
-        <!-- Day 4 -->  
-        <div class="mb-6 card">  
-            <div class="day-header-gold p-4 flex justify-between items-center font-bold">  
-                Friday: POWER MIX (Mass Builder)  
-            </div>  
-            <div class="p-4">  
-                <table class="exercise-table">  
-                    <thead>  
-                        <tr>  
-                            <th class="w-1/12">#</th>  
-                            <th class="w-7/12">Exercise</th>  
-                            <th class="w-4/12">Sets x Reps</th>  
-                        </tr>  
-                    </thead>  
-                    <tbody>  
-                        <tr><td>1</td><td>Weighted Push-ups (Use Backpack)</td><td>3x 8-10</td></tr>  
-                        <tr><td>2</td><td>DB Overhead Press (3kg)</td><td>3x 15</td></tr>  
-                        <tr><td>3</td><td>Close-grip Push-ups</td><td>3x 12</td></tr>  
-                        <tr><td>4</td><td>Farmer Walk (Grip Strength)</td><td>3x 45 sec</td></tr>  
-                    </tbody>  
-                </table>  
-            </div>  
-        </div>  
+import { useState, useRef } from "react";
 
-        <!-- Nutrition Card -->
-        <div class="mb-6 card border-l-4 border-green-500">  
-            <div class="bg-green-50 p-3 flex justify-between items-center text-green-800 text-sm font-bold uppercase tracking-wider">  
-                Village Diet (For Mass Gain)
-            </div>  
-            <div class="p-4 text-gray-700 text-sm grid grid-cols-1 sm:grid-cols-2 gap-4">  
-                <div>
-                    <p class="font-bold text-green-700 mb-1">Morning:</p>
-                    <p>Bhiga Kala Chana (1 Katori) + Gud + 2 Kela.</p>
+const SYSTEM_PROMPT = `You are a professional trading analyst with 20+ years of experience. Analyze the trading chart image provided and return a detailed analysis ONLY as a valid JSON object — no extra text, no markdown, no explanation outside JSON.
+
+JSON structure (fill EVERY field based on the actual chart):
+{
+  "asset": "Name of the asset/symbol visible (e.g. NIFTY50, BTC/USDT, RELIANCE, etc.)",
+  "timeframe": "Timeframe visible (e.g. 5m, 15m, 1H, 4H, Daily)",
+  "currentPrice": "Approximate current/last price visible on chart as string",
+  "signal": "BUY or SELL or NEUTRAL",
+  "signalStrength": "STRONG or MODERATE or WEAK",
+  "sentiment": "Bullish or Bearish or Neutral",
+  "entryPrice": "Exact price level to enter trade",
+  "buyPrice": "Best price to buy (for BUY signal) or null",
+  "sellPrice": "Best price to sell/short (for SELL signal) or null",
+  "stopLoss": "Stop loss price level",
+  "target1": "First target price",
+  "target2": "Second target price",
+  "target3": "Third target price (if applicable, else null)",
+  "riskReward": "Risk:Reward ratio e.g. 1:2.5",
+  "trend": "Strong Uptrend / Uptrend / Sideways / Downtrend / Strong Downtrend",
+  "trendStrength": 0-100 number,
+  "support1": "Nearest support level price",
+  "support2": "Second support level price",
+  "resistance1": "Nearest resistance level price",
+  "resistance2": "Second resistance level price",
+  "patterns": ["list", "of", "detected", "patterns"],
+  "indicators": {
+    "rsi": "RSI value if visible, else null",
+    "macd": "MACD signal if visible (Bullish/Bearish/Neutral), else null",
+    "ma": "Moving average signal if visible, else null",
+    "volume": "Volume signal (High/Low/Average), else null",
+    "bollingerBands": "BB signal if visible, else null"
+  },
+  "candlePattern": "Current candlestick pattern name or null",
+  "keyObservations": ["3-5 key observations about the chart in Hindi/English mix"],
+  "tradeSetup": "Detailed trade setup explanation in Hinglish (2-3 sentences)",
+  "riskWarning": "Specific risk for this trade in Hinglish",
+  "confidence": 0-100
+}
+
+CRITICAL RULES:
+1. Read price levels DIRECTLY from the chart axes — do not make up numbers
+2. Return ONLY raw JSON, nothing else
+3. All price fields must be actual numbers visible in the chart
+4. keyObservations must be in Hinglish (Hindi+English mix)`;
+
+export default function TradingAnalyzer() {
+  const [imgSrc, setImgSrc] = useState(null);
+  const [imgB64, setImgB64] = useState(null);
+  const [imgType, setImgType] = useState("image/jpeg");
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [dragOver, setDragOver] = useState(false);
+  const inputRef = useRef(null);
+
+  const loadFile = (file) => {
+    if (!file) return;
+    if (!file.type.startsWith("image/")) {
+      setError("Sirf image file upload karein (PNG, JPG, WEBP)");
+      return;
+    }
+    setError(null);
+    setData(null);
+    setImgType(file.type);
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const full = e.target.result;
+      setImgSrc(full);
+      setImgB64(full.split(",")[1]);
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const handleInputChange = (e) => {
+    if (e.target.files && e.target.files[0]) loadFile(e.target.files[0]);
+  };
+
+  const handleDrop = (e) => {
+    e.preventDefault();
+    setDragOver(false);
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) loadFile(e.dataTransfer.files[0]);
+  };
+
+  const analyze = async () => {
+    if (!imgB64) return;
+    setLoading(true);
+    setError(null);
+    setData(null);
+    try {
+      const resp = await fetch("https://api.anthropic.com/v1/messages", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          model: "claude-sonnet-4-6",
+          max_tokens: 1000,
+          system: SYSTEM_PROMPT,
+          messages: [{
+            role: "user",
+            content: [
+              { type: "image", source: { type: "base64", media_type: imgType, data: imgB64 } },
+              { type: "text", text: "Is chart ka complete technical analysis karo aur JSON format mein dena exact price levels ke saath." }
+            ]
+          }]
+        })
+      });
+      if (!resp.ok) throw new Error(`API Error ${resp.status}`);
+      const raw = await resp.json();
+      const txt = raw.content.map(b => b.text || "").join("");
+      const clean = txt.replace(/```json|```/g, "").trim();
+      const parsed = JSON.parse(clean);
+      setData(parsed);
+    } catch (e) {
+      setError("Analysis fail hui. Dobara try karein ya alag chart use karein.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const reset = () => {
+    setImgSrc(null); setImgB64(null); setData(null); setError(null);
+    if (inputRef.current) inputRef.current.value = "";
+  };
+
+  const isBuy = data?.signal === "BUY";
+  const isSell = data?.signal === "SELL";
+  const signalColor = isBuy ? "#00ff88" : isSell ? "#ff4d6d" : "#f59e0b";
+  const signalBg = isBuy ? "rgba(0,255,136,0.08)" : isSell ? "rgba(255,77,109,0.08)" : "rgba(245,158,11,0.08)";
+  const signalBorder = isBuy ? "rgba(0,255,136,0.3)" : isSell ? "rgba(255,77,109,0.3)" : "rgba(245,158,11,0.3)";
+
+  return (
+    <div style={{ minHeight: "100vh", background: "#080c16", color: "#e2e8f0", fontFamily: "'Segoe UI', system-ui, sans-serif", padding: "20px 16px 60px" }}>
+      <style>{`
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        @keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.4} }
+        @keyframes fadeIn { from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)} }
+        .fadeIn { animation: fadeIn 0.4s ease forwards; }
+        .drop-zone { border: 2px dashed #1e2d45; border-radius: 14px; padding: 44px 20px; text-align: center; cursor: pointer; transition: all 0.2s; background: #0d1526; }
+        .drop-zone:hover,.drop-zone.over { border-color: #00ff88; background: #0a1e14; }
+        .card { background: #0d1526; border: 1px solid #1e2d45; border-radius: 14px; overflow: hidden; margin-bottom: 14px; }
+        .row { display: flex; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+        .price-box { flex: 1; min-width: 140px; border-radius: 12px; padding: 14px 16px; }
+        .price-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; opacity: 0.7; }
+        .price-value { font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }
+        .price-sub { font-size: 11px; margin-top: 3px; opacity: 0.6; }
+        .obs-item { background: #0a1526; border-left: 3px solid #334d6e; padding: 10px 14px; border-radius: 0 8px 8px 0; margin-bottom: 8px; font-size: 13px; line-height: 1.55; color: #94a3b8; }
+        .tag { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; margin: 3px; }
+        .ind-row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid #1a2840; font-size: 13px; }
+        .ind-row:last-child { border-bottom: none; }
+        .btn-analyze { width: 100%; padding: 15px; border-radius: 12px; border: none; font-size: 15px; font-weight: 700; cursor: pointer; background: linear-gradient(135deg, #00ff88, #00c8d4); color: #060d16; font-family: inherit; transition: all 0.2s; letter-spacing: 0.02em; }
+        .btn-analyze:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,255,136,0.25); }
+        .btn-analyze:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+        .btn-reset { padding: 10px 18px; border-radius: 10px; border: 1px solid #1e2d45; background: #0d1526; color: #64748b; cursor: pointer; font-family: inherit; font-size: 13px; font-weight: 500; transition: all 0.2s; }
+        .btn-reset:hover { border-color: #334d6e; color: #94a3b8; }
+        .section-title { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #475569; margin-bottom: 12px; }
+        .conf-bar { height: 8px; background: #1a2840; border-radius: 4px; overflow: hidden; }
+        .conf-fill { height: 100%; border-radius: 4px; transition: width 1s ease; }
+      `}</style>
+
+      {/* Header */}
+      <div style={{ textAlign: "center", marginBottom: 28 }}>
+        <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(0,255,136,0.07)", border: "1px solid rgba(0,255,136,0.18)", color: "#00ff88", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "5px 14px", borderRadius: 20, marginBottom: 14 }}>
+          <span style={{ animation: "pulse 2s infinite" }}>●</span> AI Chart Analyzer
+        </div>
+        <div style={{ fontSize: "clamp(22px,5vw,36px)", fontWeight: 800, background: "linear-gradient(135deg,#fff 20%,#00ff88 60%,#00c8ff)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", lineHeight: 1.2, marginBottom: 8 }}>Trading Chart Analyzer</div>
+        <div style={{ color: "#475569", fontSize: 13 }}>Screenshot upload karein → Buy/Sell signal + exact price levels milenge</div>
+      </div>
+
+      <div style={{ maxWidth: 780, margin: "0 auto" }}>
+
+        {/* Upload or Preview */}
+        {!imgSrc ? (
+          <div
+            className={`drop-zone ${dragOver ? "over" : ""}`}
+            style={{ marginBottom: 14 }}
+            onClick={() => inputRef.current?.click()}
+            onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
+            onDragLeave={() => setDragOver(false)}
+            onDrop={handleDrop}
+          >
+            <input ref={inputRef} type="file" accept="image/png,image/jpeg,image/webp,image/gif" style={{ display: "none" }} onChange={handleInputChange} />
+            <div style={{ width: 60, height: 60, borderRadius: 16, background: "linear-gradient(135deg,#00ff88,#00c8d4)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 16px", fontSize: 26 }}>📊</div>
+            <div style={{ fontSize: 16, fontWeight: 600, color: "#cbd5e1", marginBottom: 6 }}>Chart Screenshot Yahan Drop Karein</div>
+            <div style={{ fontSize: 13, color: "#334d6e", marginBottom: 16 }}>ya neeche button se upload karein</div>
+            <div style={{ display: "inline-block", background: "linear-gradient(135deg,#00ff88,#00c8d4)", color: "#060d16", fontWeight: 700, fontSize: 13, padding: "10px 24px", borderRadius: 10 }}>📁 File Choose Karein</div>
+            <div style={{ marginTop: 14, color: "#2a3d56", fontSize: 12 }}>PNG · JPG · WEBP supported</div>
+          </div>
+        ) : (
+          <div className="card" style={{ marginBottom: 14 }}>
+            <img src={imgSrc} alt="chart" style={{ width: "100%", maxHeight: 380, objectFit: "contain", display: "block", background: "#060d16" }} />
+            <div style={{ padding: "12px 14px", display: "flex", gap: 10, background: "#080c16", borderTop: "1px solid #1e2d45" }}>
+              <button className="btn-analyze" onClick={analyze} disabled={loading} style={{ flex: 1, padding: "13px" }}>
+                {loading ? "⏳ Analyzing chart..." : "🔍 Analyze Karo — Buy/Sell Signal Lo"}
+              </button>
+              <button className="btn-reset" onClick={reset}>✕</button>
+            </div>
+          </div>
+        )}
+
+        {/* Error */}
+        {error && (
+          <div style={{ background: "rgba(255,77,109,0.08)", border: "1px solid rgba(255,77,109,0.25)", borderRadius: 12, padding: "13px 16px", color: "#ff4d6d", fontSize: 13, marginBottom: 14, display: "flex", gap: 8 }}>
+            <span>⚠️</span><span>{error}</span>
+          </div>
+        )}
+
+        {/* Loading */}
+        {loading && (
+          <div className="card fadeIn" style={{ padding: 36, textAlign: "center" }}>
+            <div style={{ width: 48, height: 48, border: "3px solid #1e2d45", borderTopColor: "#00ff88", borderRadius: "50%", animation: "spin 0.75s linear infinite", margin: "0 auto 16px" }} />
+            <div style={{ fontSize: 15, fontWeight: 600, color: "#cbd5e1", marginBottom: 6 }}>Chart scan ho raha hai...</div>
+            <div style={{ fontSize: 13, color: "#334d6e" }}>Price levels, patterns aur signals detect kiye ja rahe hain</div>
+          </div>
+        )}
+
+        {/* Results */}
+        {data && (
+          <div className="fadeIn">
+
+            {/* Signal Banner */}
+            <div style={{ background: signalBg, border: `1px solid ${signalBorder}`, borderRadius: 14, padding: "20px 20px", marginBottom: 14, display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
+              <div>
+                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", color: signalColor, textTransform: "uppercase", marginBottom: 6, opacity: 0.8 }}>
+                  {data.asset} · {data.timeframe}
                 </div>
-                <div>
-                    <p class="font-bold text-green-700 mb-1">After Workout:</p>
-                    <p>500ml Doodh + 1 Katori Sattu ya Dalia.</p>
+                <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
+                  <div style={{ fontSize: 32, fontWeight: 900, color: signalColor, letterSpacing: "-0.02em" }}>
+                    {isBuy ? "▲ BUY" : isSell ? "▼ SELL" : "◆ NEUTRAL"}
+                  </div>
+                  <div>
+                    <div style={{ display: "inline-block", background: signalBg, border: `1px solid ${signalBorder}`, color: signalColor, fontSize: 11, fontWeight: 700, padding: "3px 10px", borderRadius: 20, marginBottom: 4 }}>
+                      {data.signalStrength}
+                    </div>
+                    <div style={{ fontSize: 12, color: "#64748b" }}>{data.sentiment} · {data.trend}</div>
+                  </div>
                 </div>
-                <div>
-                    <p class="font-bold text-green-700 mb-1">Daily Target:</p>
-                    <p>2 Litre Doodh + 5-6 Roti Ghee ke saath + Dahi.</p>
+              </div>
+              <div style={{ textAlign: "right" }}>
+                <div style={{ fontSize: 12, color: "#475569", marginBottom: 4 }}>Current Price</div>
+                <div style={{ fontSize: 28, fontWeight: 800, color: "#e2e8f0" }}>{data.currentPrice}</div>
+                <div style={{ fontSize: 12, color: "#475569", marginTop: 4 }}>Confidence: {data.confidence}%</div>
+              </div>
+            </div>
+
+            {/* Price Levels Grid */}
+            <div className="row">
+              {/* Entry */}
+              <div className="price-box" style={{ background: "rgba(99,179,237,0.08)", border: "1px solid rgba(99,179,237,0.25)", minWidth: 140 }}>
+                <div className="price-label" style={{ color: "#63b3ed" }}>🎯 Entry Price</div>
+                <div className="price-value" style={{ color: "#93c5fd" }}>{data.entryPrice}</div>
+                <div className="price-sub">Yahan se trade lo</div>
+              </div>
+
+              {/* Buy / Sell price */}
+              {isBuy && data.buyPrice && (
+                <div className="price-box" style={{ background: "rgba(0,255,136,0.08)", border: "1px solid rgba(0,255,136,0.28)" }}>
+                  <div className="price-label" style={{ color: "#00ff88" }}>📈 Buy At</div>
+                  <div className="price-value" style={{ color: "#00ff88" }}>{data.buyPrice}</div>
+                  <div className="price-sub">Best buy level</div>
                 </div>
-                <div>
-                    <p class="font-bold text-green-700 mb-1">Village Secret:</p>
-                    <p>Doodh mein Ashwagandha ya Safed Musli (optional).</p>
+              )}
+              {isSell && data.sellPrice && (
+                <div className="price-box" style={{ background: "rgba(255,77,109,0.08)", border: "1px solid rgba(255,77,109,0.28)" }}>
+                  <div className="price-label" style={{ color: "#ff4d6d" }}>📉 Sell At</div>
+                  <div className="price-value" style={{ color: "#ff4d6d" }}>{data.sellPrice}</div>
+                  <div className="price-sub">Best sell level</div>
                 </div>
-            </div>  
-        </div>  
-  
-        <div class="text-center text-sm text-gray-500 mt-8 mb-4 no-print">  
-            <p>⚡ Quality is everything. Don't rush the reps.</p>  
-            <p>⚡ Plan download karke Google Drive mein save karein.</p>  
-        </div>  
-          
-    </div>  
-  
-</body>  
-</html>
+              )}
+
+              {/* Stop Loss */}
+              <div className="price-box" style={{ background: "rgba(239,68,68,0.08)", border: "1px solid rgba(239,68,68,0.25)" }}>
+                <div className="price-label" style={{ color: "#ef4444" }}>🛑 Stop Loss</div>
+                <div className="price-value" style={{ color: "#f87171" }}>{data.stopLoss}</div>
+                <div className="price-sub">Isse neeche loss cut</div>
+              </div>
+
+              {/* Risk:Reward */}
+              <div className="price-box" style={{ background: "rgba(167,139,250,0.08)", border: "1px solid rgba(167,139,250,0.25)" }}>
+                <div className="price-label" style={{ color: "#a78bfa" }}>⚖️ Risk:Reward</div>
+                <div className="price-value" style={{ color: "#c4b5fd", fontSize: 20 }}>{data.riskReward}</div>
+                <div className="price-sub">Trade ratio</div>
+              </div>
+            </div>
+
+            {/* Targets */}
+            <div className="row">
+              <div className="price-box" style={{ background: "rgba(0,255,136,0.06)", border: "1px solid rgba(0,255,136,0.18)" }}>
+                <div className="price-label" style={{ color: "#00ff88" }}>🎯 Target 1</div>
+                <div className="price-value" style={{ color: "#6ee7b7" }}>{data.target1}</div>
+                <div className="price-sub">Pehla profit level</div>
+              </div>
+              <div className="price-box" style={{ background: "rgba(0,200,212,0.06)", border: "1px solid rgba(0,200,212,0.18)" }}>
+                <div className="price-label" style={{ color: "#00c8d4" }}>🎯 Target 2</div>
+                <div className="price-value" style={{ color: "#67e8f9" }}>{data.target2}</div>
+                <div className="price-sub">Doosra profit level</div>
+              </div>
+              {data.target3 && (
+                <div className="price-box" style={{ background: "rgba(99,102,241,0.06)", border: "1px solid rgba(99,102,241,0.18)" }}>
+                  <div className="price-label" style={{ color: "#818cf8" }}>🎯 Target 3</div>
+                  <div className="price-value" style={{ color: "#a5b4fc" }}>{data.target3}</div>
+                  <div className="price-sub">Teesra profit level</div>
+                </div>
+              )}
+            </div>
+
+            {/* Support & Resistance */}
+            <div className="card" style={{ padding: 18, marginBottom: 14 }}>
+              <div className="section-title">Support & Resistance Levels</div>
+              <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+                <div style={{ flex: 1, minWidth: 140 }}>
+                  <div style={{ fontSize: 11, fontWeight: 600, color: "#00ff88", marginBottom: 8, letterSpacing: "0.08em" }}>▲ SUPPORT</div>
+                  <div style={{ background: "rgba(0,255,136,0.06)", border: "1px solid rgba(0,255,136,0.15)", borderRadius: 10, padding: "10px 14px", marginBottom: 8 }}>
+                    <div style={{ fontSize: 11, color: "#475569", marginBottom: 2 }}>S1 (Nearest)</div>
+                    <div style={{ fontSize: 18, fontWeight: 700, color: "#6ee7b7" }}>{data.support1}</div>
+                  </div>
+                  <div style={{ background: "rgba(0,255,136,0.04)", border: "1px solid rgba(0,255,136,0.1)", borderRadius: 10, padding: "10px 14px" }}>
+                    <div style={{ fontSize: 11, color: "#475569", marginBottom: 2 }}>S2 (Strong)</div>
+                    <div style={{ fontSize: 18, fontWeight: 700, color: "#4ade80" }}>{data.support2}</div>
+                  </div>
+                </div>
+                <div style={{ flex: 1, minWidth: 140 }}>
+                  <div style={{ fontSize: 11, fontWeight: 600, color: "#ff4d6d", marginBottom: 8, letterSpacing: "0.08em" }}>▼ RESISTANCE</div>
+                  <div style={{ background: "rgba(255,77,109,0.06)", border: "1px solid rgba(255,77,109,0.15)", borderRadius: 10, padding: "10px 14px", marginBottom: 8 }}>
+                    <div style={{ fontSize: 11, color: "#475569", marginBottom: 2 }}>R1 (Nearest)</div>
+                    <div style={{ fontSize: 18, fontWeight: 700, color: "#fca5a5" }}>{data.resistance1}</div>
+                  </div>
+                  <div style={{ background: "rgba(255,77,109,0.04)", border: 
