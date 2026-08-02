@@ -1,116 +1,228 @@
-<tr><td>6</td><td class="font-medium">Photo Abs Workout <span class="text-gray-500 font-normal text-xs block">Upper, lower & oblique crunch circuit</span></td><td>See Image</td></tr>
-    } catch (e) {
-      setError("Analysis fail hui. Dobara try karein ya alag chart use karein.");
-    } finally {
-      setLoading(false);
-    }
-  };
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>4-Day Dumbbell & Bodyweight Plan</title>  
+    <script src="https://cdn.tailwindcss.com"></script>  
+    <link rel="preconnect" href="https://fonts.googleapis.com">  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">  
+    <style>  
+        body {  
+            font-family: 'Inter', sans-serif;  
+            background-color: #f3f4f6;  
+            color: #1f2937;
+        }  
+        .container {  
+            max-width: 800px;  
+        }  
+        .card {  
+            background-color: white;  
+            border-radius: 10px;  
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);  
+            overflow: hidden;  
+            margin-bottom: 1.5rem;
+            border: 1px solid #e5e7eb;
+        }  
+        .day-header {  
+            padding: 1rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-push { background-color: #fee2e2; color: #991b1b; }
+        .header-pull { background-color: #dbeafe; color: #1e40af; }
+        .header-legs { background-color: #dcfce7; color: #166534; }
+        .header-mix { background-color: #fef3c7; color: #92400e; }
+        .header-rest { background-color: #f3f4f6; color: #374151; }
 
-  const reset = () => {
-    setImgSrc(null); setImgB64(null); setData(null); setError(null);
-    if (inputRef.current) inputRef.current.value = "";
-  };
-
-  const isBuy = data?.signal === "BUY";
-  const isSell = data?.signal === "SELL";
-  const signalColor = isBuy ? "#00ff88" : isSell ? "#ff4d6d" : "#f59e0b";
-  const signalBg = isBuy ? "rgba(0,255,136,0.08)" : isSell ? "rgba(255,77,109,0.08)" : "rgba(245,158,11,0.08)";
-  const signalBorder = isBuy ? "rgba(0,255,136,0.3)" : isSell ? "rgba(255,77,109,0.3)" : "rgba(245,158,11,0.3)";
-
-  return (
-    <div style={{ minHeight: "100vh", background: "#080c16", color: "#e2e8f0", fontFamily: "'Segoe UI', system-ui, sans-serif", padding: "20px 16px 60px" }}>
-      <style>{`
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        @keyframes spin { to { transform: rotate(360deg); } }
-        @keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.4} }
-        @keyframes fadeIn { from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)} }
-        .fadeIn { animation: fadeIn 0.4s ease forwards; }
-        .drop-zone { border: 2px dashed #1e2d45; border-radius: 14px; padding: 44px 20px; text-align: center; cursor: pointer; transition: all 0.2s; background: #0d1526; }
-        .drop-zone:hover,.drop-zone.over { border-color: #00ff88; background: #0a1e14; }
-        .card { background: #0d1526; border: 1px solid #1e2d45; border-radius: 14px; overflow: hidden; margin-bottom: 14px; }
-        .row { display: flex; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
-        .price-box { flex: 1; min-width: 140px; border-radius: 12px; padding: 14px 16px; }
-        .price-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; opacity: 0.7; }
-        .price-value { font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }
-        .price-sub { font-size: 11px; margin-top: 3px; opacity: 0.6; }
-        .obs-item { background: #0a1526; border-left: 3px solid #334d6e; padding: 10px 14px; border-radius: 0 8px 8px 0; margin-bottom: 8px; font-size: 13px; line-height: 1.55; color: #94a3b8; }
-        .tag { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; margin: 3px; }
-        .ind-row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid #1a2840; font-size: 13px; }
-        .ind-row:last-child { border-bottom: none; }
-        .btn-analyze { width: 100%; padding: 15px; border-radius: 12px; border: none; font-size: 15px; font-weight: 700; cursor: pointer; background: linear-gradient(135deg, #00ff88, #00c8d4); color: #060d16; font-family: inherit; transition: all 0.2s; letter-spacing: 0.02em; }
-        .btn-analyze:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,255,136,0.25); }
-        .btn-analyze:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
-        .btn-reset { padding: 10px 18px; border-radius: 10px; border: 1px solid #1e2d45; background: #0d1526; color: #64748b; cursor: pointer; font-family: inherit; font-size: 13px; font-weight: 500; transition: all 0.2s; }
-        .btn-reset:hover { border-color: #334d6e; color: #94a3b8; }
-        .section-title { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #475569; margin-bottom: 12px; }
-        .conf-bar { height: 8px; background: #1a2840; border-radius: 4px; overflow: hidden; }
-        .conf-fill { height: 100%; border-radius: 4px; transition: width 1s ease; }
-      `}</style>
-
-      {/* Header */}
-      <div style={{ textAlign: "center", marginBottom: 28 }}>
-        <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(0,255,136,0.07)", border: "1px solid rgba(0,255,136,0.18)", color: "#00ff88", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "5px 14px", borderRadius: 20, marginBottom: 14 }}>
-          <span style={{ animation: "pulse 2s infinite" }}>●</span> AI Chart Analyzer
-        </div>
-        <div style={{ fontSize: "clamp(22px,5vw,36px)", fontWeight: 800, background: "linear-gradient(135deg,#fff 20%,#00ff88 60%,#00c8ff)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", lineHeight: 1.2, marginBottom: 8 }}>Trading Chart Analyzer</div>
-        <div style={{ color: "#475569", fontSize: 13 }}>Screenshot upload karein → Buy/Sell signal + exact price levels milenge</div>
-      </div>
-
-      <div style={{ maxWidth: 780, margin: "0 auto" }}>
-
-        {/* Upload or Preview */}
-        {!imgSrc ? (
-          <div
-            className={`drop-zone ${dragOver ? "over" : ""}`}
-            style={{ marginBottom: 14 }}
-            onClick={() => inputRef.current?.click()}
-            onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
-            onDragLeave={() => setDragOver(false)}
-            onDrop={handleDrop}
-          >
-            <input ref={inputRef} type="file" accept="image/png,image/jpeg,image/webp,image/gif" style={{ display: "none" }} onChange={handleInputChange} />
-            <div style={{ width: 60, height: 60, borderRadius: 16, background: "linear-gradient(135deg,#00ff88,#00c8d4)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 16px", fontSize: 26 }}>📊</div>
-            <div style={{ fontSize: 16, fontWeight: 600, color: "#cbd5e1", marginBottom: 6 }}>Chart Screenshot Yahan Drop Karein</div>
-            <div style={{ fontSize: 13, color: "#334d6e", marginBottom: 16 }}>ya neeche button se upload karein</div>
-            <div style={{ display: "inline-block", background: "linear-gradient(135deg,#00ff88,#00c8d4)", color: "#060d16", fontWeight: 700, fontSize: 13, padding: "10px 24px", borderRadius: 10 }}>📁 File Choose Karein</div>
-            <div style={{ marginTop: 14, color: "#2a3d56", fontSize: 12 }}>PNG · JPG · WEBP supported</div>
-          </div>
-        ) : (
-          <div className="card" style={{ marginBottom: 14 }}>
-            <img src={imgSrc} alt="chart" style={{ width: "100%", maxHeight: 380, objectFit: "contain", display: "block", background: "#060d16" }} />
-            <div style={{ padding: "12px 14px", display: "flex", gap: 10, background: "#080c16", borderTop: "1px solid #1e2d45" }}>
-              <button className="btn-analyze" onClick={analyze} disabled={loading} style={{ flex: 1, padding: "13px" }}>
-                {loading ? "⏳ Analyzing chart..." : "🔍 Analyze Karo — Buy/Sell Signal Lo"}
-              </button>
-              <button className="btn-reset" onClick={reset}>✕</button>
+        .exercise-table {  
+            width: 100%;  
+            border-collapse: collapse;  
+            font-size: 0.95rem;  
+        }  
+        .exercise-table th, .exercise-table td {  
+            padding: 12px 16px;  
+            border-bottom: 1px solid #f3f4f6;  
+            text-align: left;  
+        }  
+        .exercise-table th {  
+            font-weight: 600;  
+            color: #4b5563;
+            background-color: #f9fafb;
+        }  
+        .exercise-table tr:last-child td {  
+            border-bottom: none;  
+        }  
+        @media print {  
+            .no-print { display: none !important; }  
+            body { background-color: #ffffff; }  
+            .card { box-shadow: none; border: 1px solid #ccc; page-break-inside: avoid; margin-bottom: 1rem; }
+            * { -webkit-print-color-adjust: exact !important; color-adjust: exact !important; }
+        }  
+    </style>  
+</head>  
+<body class="p-4 sm:p-8">  
+  
+    <div class="container mx-auto">  
+        <!-- Header Section -->
+        <div class="flex flex-col sm:flex-row justify-between items-center mb-8 border-b pb-4">  
+            <div class="text-center sm:text-left">
+                <h1 class="text-3xl font-bold text-gray-900 mb-1">4-Day Workout Plan</h1>  
+                <p class="text-gray-600 font-medium">Equipment: Bodyweight, Pull-up Bar & 3kg Dumbbells</p>
             </div>
-          </div>
-        )}
+            <button onclick="window.print()" class="no-print mt-4 sm:mt-0 bg-black hover:bg-gray-800 text-white font-semibold py-2.5 px-6 rounded-md transition-colors shadow-sm">  
+                Download PDF  
+            </button>  
+        </div>  
+  
+        <!-- Rules -->
+        <div class="mb-8 card border-l-4 border-black">  
+            <div class="bg-gray-50 p-3 px-4 text-black text-sm font-bold uppercase tracking-wider border-b">  
+                Execution Rules  
+            </div>  
+            <div class="p-4 text-gray-700 text-sm leading-relaxed">  
+                <ul class="list-disc list-inside space-y-1.5">  
+                    <li><span class="font-semibold text-black">Tempo:</span> 4 seconds down (slow eccentric) on every single rep to maximize 3kg dumbbell tension.</li>  
+                    <li><span class="font-semibold text-black">Intensity:</span> Push every set close to failure.</li>  
+                    <li><span class="font-semibold text-black">Diet:</span> High protein and caloric surplus are mandatory for growth.</li>  
+                </ul>  
+            </div>  
+        </div>  
+  
+        <!-- Day 1 -->  
+        <div class="card">  
+            <div class="day-header header-push">  
+                <span>Day 1: Monday</span>
+                <span class="text-sm font-semibold opacity-80">Upper Body Push</span>
+            </div>  
+            <div>  
+                <table class="exercise-table">  
+                    <thead>  
+                        <tr>  
+                            <th class="w-1/12">#</th>  
+                            <th class="w-7/12">Exercise</th>  
+                            <th class="w-4/12">Sets x Reps</th>  
+                        </tr>  
+                    </thead>  
+                    <tbody>  
+                        <tr><td>1</td><td class="font-medium">Decline Push-ups <span class="text-gray-500 font-normal text-xs block">Feet elevated</span></td><td>3 x Max</td></tr>  
+                        <tr><td>2</td><td class="font-medium">Normal Push-ups <span class="text-gray-500 font-normal text-xs block">Slow tempo</span></td><td>3 x 12-15</td></tr>  
+                        <tr><td>3</td><td class="font-medium">Diamond Push-ups <span class="text-gray-500 font-normal text-xs block">Triceps & inner chest</span></td><td>3 x 10-12</td></tr>  
+                        <tr><td>4</td><td class="font-medium">Dumbbell Overhead Press <span class="text-gray-500 font-normal text-xs block">3kg DB</span></td><td>3 x 15</td></tr>  
+                        <tr><td>5</td><td class="font-medium">Dumbbell Lateral Raises <span class="text-gray-500 font-normal text-xs block">3kg DB (4 sec slow down)</span></td><td>4 x 15</td></tr>  
+                    </tbody>  
+                </table>  
+            </div>  
+        </div>  
+  
+        <!-- Day 2 -->  
+        <div class="card">  
+            <div class="day-header header-pull">  
+                <span>Day 2: Tuesday</span>
+                <span class="text-sm font-semibold opacity-80">Upper Body Pull</span>
+            </div>  
+            <div>  
+                <table class="exercise-table">  
+                    <thead>  
+                        <tr>  
+                            <th class="w-1/12">#</th>  
+                            <th class="w-7/12">Exercise</th>  
+                            <th class="w-4/12">Sets x Reps</th>  
+                        </tr>  
+                    </thead>  
+                    <tbody>  
+                        <tr><td>1</td><td class="font-medium">Wide Grip Pull-ups <span class="text-gray-500 font-normal text-xs block">Back width</span></td><td>3 x Max</td></tr>  
+                        <tr><td>2</td><td class="font-medium">Chin-ups <span class="text-gray-500 font-normal text-xs block">Palms facing you</span></td><td>3 x Max</td></tr>  
+                        <tr><td>3</td><td class="font-medium">Dumbbell Rows <span class="text-gray-500 font-normal text-xs block">Both 3kg DBs in one hand</span></td><td>3 x 12</td></tr>  
+                        <tr><td>4</td><td class="font-medium">Dumbbell Bicep Curls <span class="text-gray-500 font-normal text-xs block">Slow control</span></td><td>4 x 12-15</td></tr>  
+                        <tr><td>5</td><td class="font-medium">Dead Hangs <span class="text-gray-500 font-normal text-xs block">Hang on bar</span></td><td>3 Rounds</td></tr>  
+                    </tbody>  
+                </table>  
+            </div>  
+        </div>  
+          
+        <!-- Day 3 -->
+        <div class="card">
+            <div class="day-header header-rest">
+                <span>Day 3: Wednesday</span>
+                <span class="text-sm font-semibold opacity-80">REST</span>
+            </div>
+            <div class="p-4 text-sm text-gray-600 font-medium">
+                Active recovery and high calorie intake day. No weight training.
+            </div>
+        </div>
 
-        {/* Error */}
-        {error && (
-          <div style={{ background: "rgba(255,77,109,0.08)", border: "1px solid rgba(255,77,109,0.25)", borderRadius: 12, padding: "13px 16px", color: "#ff4d6d", fontSize: 13, marginBottom: 14, display: "flex", gap: 8 }}>
-            <span>⚠️</span><span>{error}</span>
-          </div>
-        )}
+        <!-- Day 4 -->  
+        <div class="card">  
+            <div class="day-header header-legs">  
+                <span>Day 4: Thursday</span>
+                <span class="text-sm font-semibold opacity-80">Legs & Calves</span>
+            </div>  
+            <div>  
+                <table class="exercise-table">  
+                    <thead>  
+                        <tr>  
+                            <th class="w-1/12">#</th>  
+                            <th class="w-7/12">Exercise</th>  
+                            <th class="w-4/12">Sets x Reps</th>  
+                        </tr>  
+                    </thead>  
+                    <tbody>  
+                        <tr><td>1</td><td class="font-medium">Glute Bridge <span class="text-gray-500 font-normal text-xs block">Hips off the floor</span></td><td>4 x 20</td></tr>  
+                        <tr><td>2</td><td class="font-medium">Side-Lying Leg Raise <span class="text-gray-500 font-normal text-xs block">Each leg</span></td><td>3 x 15</td></tr>  
+                        <tr><td>3</td><td class="font-medium">Standing Hamstring Curl <span class="text-gray-500 font-normal text-xs block">Bodyweight focus</span></td><td>3 x 15</td></tr>  
+                        <tr><td>4</td><td class="font-medium">Standing Calf Raises <span class="text-gray-500 font-normal text-xs block">Full stretch</span></td><td>4 x 20</td></tr>  
+                        <tr><td>5</td><td class="font-medium">Seated Calf Raises <span class="text-gray-500 font-normal text-xs block">3kg DB on knees</span></td><td>3 x 20</td></tr>  
+                    </tbody>  
+                </table>  
+            </div>  
+        </div>  
+  
+        <!-- Day 5 -->  
+        <div class="card">  
+            <div class="day-header header-mix">  
+                <span>Day 5: Friday</span>
+                <span class="text-sm font-semibold opacity-80">Full Body Mix & Stability</span>
+            </div>  
+            <div>  
+                <table class="exercise-table">  
+                    <thead>  
+                        <tr>  
+                            <th class="w-1/12">#</th>  
+                            <th class="w-7/12">Exercise</th>  
+                            <th class="w-4/12">Sets x Reps</th>  
+                        </tr>  
+                    </thead>  
+                    <tbody>  
+                        <tr><td>1</td><td class="font-medium">Pike Push-ups <span class="text-gray-500 font-normal text-xs block">Shoulder focus</span></td><td>3 x 10-12</td></tr>  
+                        <tr><td>2</td><td class="font-medium">Inverted Rows <span class="text-gray-500 font-normal text-xs block">Under table/bar</span></td><td>3 x 12</td></tr>  
+                        <tr><td>3</td><td class="font-medium">Standing Hip Abduction <span class="text-gray-500 font-normal text-xs block">Controlled motion</span></td><td>3 x 15</td></tr>  
+                        <tr><td>4</td><td class="font-medium">Clamshell <span class="text-gray-500 font-normal text-xs block">Glute activation</span></td><td>3 x 15</td></tr>  
+                        <tr><td>5</td><td class="font-medium">Tibialis Raises <span class="text-gray-500 font-normal text-xs block">Against wall</span></td><td>3 x 20</td></tr>  
+                    </tbody>  
+                </table>  
+            </div>  
+        </div>  
 
-        {/* Loading */}
-        {loading && (
-          <div className="card fadeIn" style={{ padding: 36, textAlign: "center" }}>
-            <div style={{ width: 48, height: 48, border: "3px solid #1e2d45", borderTopColor: "#00ff88", borderRadius: "50%", animation: "spin 0.75s linear infinite", margin: "0 auto 16px" }} />
-            <div style={{ fontSize: 15, fontWeight: 600, color: "#cbd5e1", marginBottom: 6 }}>Chart scan ho raha hai...</div>
-            <div style={{ fontSize: 13, color: "#334d6e" }}>Price levels, patterns aur signals detect kiye ja rahe hain</div>
-          </div>
-        )}
-
-        {/* Results */}
-        {data && (
-          <div className="fadeIn">
-
-            {/* Signal Banner */}
-            <div style={{ background: signalBg, border: `1px solid ${signalBorder}`, borderRadius: 14, padding: "20px 20px", marginBottom: 14, display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
-              <div>
-                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", color: signalColor, textTransform: "uppercase", marginBottom: 6, opacity: 0.8 }}>
+        <!-- Days 6 & 7 -->
+        <div class="card">
+            <div class="day-header header-rest">
+                <span>Day 6 & 7: Saturday & Sunday</span>
+                <span class="text-sm font-semibold opacity-80">REST</span>
+            </div>
+            <div class="p-4 text-sm text-gray-600 font-medium">
+                Deep recovery. Focus strictly on nutrition to prepare for Monday.
+            </div>
+        </div>
+          
+    </div>  
+  
+</body>  
+</html>
                   {data.asset} · {data.timeframe}
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
